@@ -2,7 +2,7 @@
   overflow: auto;
   display: flex;
   flex-direction: column;
-  padding: 28px 0;
+  padding: 28px 0 0;
   .content {
     overflow: auto;
     padding-top: 0;
@@ -11,10 +11,7 @@
       padding-left: 28px;
       padding-right: 28px;
       justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      padding-bottom: 30px;
-      margin-bottom: 20px;
+      align-items: flex-start;
       .upload {
         background: #f5f5f5;
         border-radius: 5px;
@@ -47,6 +44,94 @@
         font-weight: 500;
         font-size: 24px;
       }
+      .body{
+        input{
+          background: #F5F5F5;
+          border-radius: 5px;
+          padding: 10px;
+          padding-left: 20px;
+          margin-top: 10px;
+
+          &::-webkit-calendar-picker-indicator {
+            background: url(../img/pen.svg) no-repeat;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 6px;
+            cursor: pointer;
+        }
+        }
+      }
+    }
+    &>.details{
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 30px;
+      margin-bottom: 20px;
+      padding-left: 28px;
+      padding-right: 28px;
+      &>p{
+        background: #F5F5F5;
+        border-radius: 5px;
+        padding: 15px 20px;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 30px;
+        margin-top: 30px;
+        margin-bottom: 24px;
+      }
+      .service{
+        display: flex;
+        margin-bottom: 15px;
+        justify-content: space-between;
+        &>div{
+          input{
+            background: #F5F5F5;
+            border-radius: 5px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 21px;
+            width: 100%;
+          }
+          label{
+            color: #081D26;
+            opacity: 0.5;
+            margin-bottom: 7px;
+            text-transform: uppercase;
+            display: block;
+            font-size: 12px;
+            line-height: 18px;
+          }
+          &:not(:first-child){
+            margin-left: 25px;
+          }
+          &:nth-child(1){
+            min-width: 296px;
+          }
+          &:nth-child(2){
+            input{
+              width: 120px;
+            }
+          }
+          &:nth-child(3){
+            input{
+              width: 80px;
+            }
+          }
+          &:nth-child(4){
+            span{
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+        }
+
+      }
+      .new-item{
+        color: #3B55E6;text-decoration-line: underline;font-weight: bold;letter-spacing: -0.24px;
+        font-size: 12px;
+        line-height: 18px;
+        background: none;
+      }
     }
     .total {
       padding-left: 28px;
@@ -57,12 +142,15 @@
         .details {
           max-width: 241px;
           margin-left: auto;
-          flex-direction: column;
-          .row {
+          display: flex;
+          justify-content: space-between;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          .col {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             margin-bottom: 5px;
-            text-align: right;
           }
         }
         .price {
