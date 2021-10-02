@@ -83,6 +83,7 @@
         display: flex;
         margin-bottom: 15px;
         justify-content: space-between;
+        flex-wrap: wrap;
         &>div{
           input{
             background: #F5F5F5;

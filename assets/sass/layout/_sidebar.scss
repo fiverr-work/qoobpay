@@ -17,6 +17,12 @@
     img {
       margin-right: 15px;
     }
+    span{
+      font-family: "Poppins Regular";
+      b{
+        font-family: "Poppins Bold";
+      }
+    }
   }
   nav {
     display: flex;
@@ -24,6 +30,7 @@
     a {
       margin-bottom: 24px;
       font-size: 16px;
+      font-family: "EncodeSans Bold";
       &.active,
       &:hover {
         color: white;

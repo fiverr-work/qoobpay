@@ -3,7 +3,7 @@
 /** 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using `em` units. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
 html { font-size: 100%; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ -ms-text-size-adjust: 100%; /* 2 */ scroll-behavior: smooth; height: 100%; }
 
-body { overflow-x: hidden; height: 100%; }
+body { overflow-x: hidden; height: 100%; font-family: "Poppins Regular"; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
@@ -55,6 +55,14 @@ button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 /** 1. Remove default vertical scrollbar in IE 6/7/8/9. 2. Improve readability and alignment in all browsers. */
 textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
 
+@font-face { font-family: "EncodeSans Bold"; src: url("../fonts/EncodeSans/EncodeSans-Bold.ttf") format("truetype"); }
+
+@font-face { font-family: "Poppins Bold"; src: url("../fonts/Poppins/Poppins-Bold.ttf") format("truetype"); }
+
+@font-face { font-family: "Poppins SemiBold"; src: url("../fonts/Poppins/Poppins-SemiBold.ttf") format("truetype"); }
+
+@font-face { font-family: "Poppins Regular"; src: url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype"); }
+
 .btn { display: inline-block; border-radius: 5px; padding: 13px 17px; color: white; -webkit-transition: background-color 300ms; transition: background-color 300ms; }
 
 .btn.primary { background-color: #ff0068; border: 1px solid #ff0068; }
@@ -85,9 +93,13 @@ body > section > div > * { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
 .sidebar .brand img { margin-right: 15px; }
 
+.sidebar .brand span { font-family: "Poppins Regular"; }
+
+.sidebar .brand span b { font-family: "Poppins Bold"; }
+
 .sidebar nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
-.sidebar nav a { margin-bottom: 24px; font-size: 16px; }
+.sidebar nav a { margin-bottom: 24px; font-size: 16px; font-family: "EncodeSans Bold"; }
 
 .sidebar nav a.active, .sidebar nav a:hover { color: white; }
 
@@ -159,7 +171,7 @@ body > section > div > * { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
 .main .content > .details > p { background: #F5F5F5; border-radius: 5px; padding: 15px 20px; font-weight: 600; font-size: 15px; line-height: 30px; margin-top: 30px; margin-bottom: 24px; }
 
-.main .content > .details .service { display: -webkit-box; display: -ms-flexbox; display: flex; margin-bottom: 15px; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+.main .content > .details .service { display: -webkit-box; display: -ms-flexbox; display: flex; margin-bottom: 15px; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
 .main .content > .details .service > div input { background: #F5F5F5; border-radius: 5px; padding: 6px 12px; font-size: 14px; line-height: 21px; width: 100%; }
 
