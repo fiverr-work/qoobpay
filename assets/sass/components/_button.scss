@@ -1,0 +1,40 @@
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 13px 17px;
+  color: white;
+  transition: background-color 300ms;
+
+  &.primary {
+    background-color: #ff0068;
+    border: 1px solid #ff0068;
+    &:hover {
+      transition: background-color 300ms;
+      background-color: #53e4b0;
+      border-color: #53e4b0;
+    }
+  }
+  &.secondary {
+    background-color: #3b55e6;
+    border: 1px dashed #000000;
+    &:hover {
+      transition: background-color 300ms;
+      background-color: #53e4b0;
+      border-color: #53e4b0;
+    }
+  }
+}
+.link {
+  text-decoration: underline;
+  color: #ff0068;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.24px;
+  background: none;
+  font-size: "Mulish SemiBold";
+  transition: color 300ms;
+  &:hover {
+    transition: color 300ms;
+    color: #53e4b0;
+  }
+}

@@ -1,0 +1,51 @@
+.sidebar {
+  background-color: #081d26;
+  width: 206px;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  a {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-bottom: 50px;
+    font-size: 23px;
+    img {
+      margin-right: 15px;
+    }
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    a {
+      margin-bottom: 24px;
+      font-size: 16px;
+      &.active,
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  & > span {
+    margin-top: auto;
+    display: block;
+  }
+
+  @media only screen and (max-width: 756px) {
+    position: fixed;
+    inset: 0;
+    left: -100%;
+    width: 100%;
+    align-items: center;
+    nav {
+      margin-top: auto;
+    }
+    &.open {
+      left: 0;
+    }
+  }
+}
