@@ -18,8 +18,7 @@
     <title>Qoobpay</title>
   </head>
   <body>
-    <aside class="sidebar">
-      <div class="close" onclick="collapse();"></div>
+    <aside class="sidebar" id="sidebar" >
       <a href="#" class="brand">
         <img src="./assets/img/logo.svg" alt="qoobpay" />
         <span>qoob<b>pay</b></span>
@@ -31,6 +30,7 @@
       </nav>
       <span>Qoob v1.0</span>
     </aside>
+    <div class="closeSidebar" onclick="collapse();"></div>
     <section>
       <nav class="navbar">
         <div>
@@ -68,7 +68,7 @@
               />
             </svg>
           </button>
-          <form class="search">
+          <form class="search" id="search">
             <button type="submit">
               <svg
                 width="16"
@@ -84,6 +84,7 @@
               </svg>
             </button>
             <input type="search" />
+            <div class="close"  onclick="toggleSearch();"></div>
           </form>
           <button class="add">
             <svg
@@ -99,6 +100,20 @@
               />
             </svg>
           </button>
+          <button class="toggle-search" onclick="toggleSearch();">
+            <svg
+            width="16"
+            height="17"
+            viewBox="0 0 16 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.875 14.6562L12.0938 10.875C12 10.8125 11.9062 10.75 11.8125 10.75H11.4062C12.375 9.625 13 8.125 13 6.5C13 2.9375 10.0625 0 6.5 0C2.90625 0 0 2.9375 0 6.5C0 10.0938 2.90625 13 6.5 13C8.125 13 9.59375 12.4062 10.75 11.4375V11.8438C10.75 11.9375 10.7812 12.0312 10.8438 12.125L14.625 15.9062C14.7812 16.0625 15.0312 16.0625 15.1562 15.9062L15.875 15.1875C16.0312 15.0625 16.0312 14.8125 15.875 14.6562ZM6.5 11.5C3.71875 11.5 1.5 9.28125 1.5 6.5C1.5 3.75 3.71875 1.5 6.5 1.5C9.25 1.5 11.5 3.75 11.5 6.5C11.5 9.28125 9.25 11.5 6.5 11.5Z"
+              fill="#081D26"
+            />
+          </svg>
+        </button>
         </div>
         <div>
           <button class="bell">
@@ -125,7 +140,8 @@
         </div>
       </nav>
       <div>
-        <aside class="list">
+        <aside class="list" id="list" >
+          <div class="close-list" onclick="collapseList();">Close</div>
           <div class="list__item">
             <div class="header">
               <h3>Billabong Women</h3>
@@ -464,7 +480,8 @@
             </div>
           </div>
         </aside>
-        <form class="main">
+        <div class="close-list" onclick="collapseList();"></div>
+        <div class="main">
           <div class="content">
             <div class="header">
               <div class="upload">
@@ -545,35 +562,33 @@
             </div>
           </div>
           <footer>
-            <button class="link">Save Draft</button>
-            <span>1 Link Added</span>
-            <button class="btn secondary">
-              <svg
-                width="13"
-                height="15"
-                viewBox="0 0 13 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.55078 13.5195C3.16406 15.1602 5.78906 15.1875 7.42969 13.5195L12.1328 8.70703C12.2969 8.54297 12.2969 8.26953 12.1055 8.10547L11.4766 7.47656C11.3125 7.3125 11.0391 7.3125 10.875 7.47656L6.17188 12.2891C5.24219 13.2461 3.73828 13.2461 2.80859 12.2891C1.87891 11.332 1.87891 9.74609 2.83594 8.78906L8.57812 2.91016C9.09766 2.39062 9.94531 2.39062 10.4648 2.91016C10.9844 3.45703 10.9844 4.35938 10.4648 4.90625L5.46094 10.0195C5.35156 10.1289 5.16016 10.1289 5.02344 10.0195C4.91406 9.88281 4.91406 9.63672 5.05078 9.5L8.98828 5.50781C9.15234 5.31641 9.15234 5.04297 8.96094 4.87891L8.35938 4.27734C8.16797 4.08594 7.89453 4.11328 7.73047 4.27734L3.79297 8.29688C3 9.08984 2.97266 10.4023 3.76562 11.2227C4.55859 12.0703 5.89844 12.0703 6.71875 11.25L11.7227 6.13672C12.9258 4.90625 12.8984 2.91016 11.7227 1.67969C10.4922 0.449219 8.52344 0.449219 7.32031 1.67969L1.57812 7.55859C-0.0351562 9.19922 -0.0625 11.8516 1.55078 13.5195Z"
-                  fill="white"
-                />
-              </svg>
-              Add/Edit File Link
-            </button>
-            <button class="btn primary">Nudge Client For Payment</button>
+            <div>
+              <div class="open-list" onclick="collapseList();">List</div>
+              <button class="link">Save Draft</button>
+              <span>1 Link Added</span>
+            </div>
+            <div>
+              <button class="btn secondary">
+                <svg
+                  width="13"
+                  height="15"
+                  viewBox="0 0 13 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.55078 13.5195C3.16406 15.1602 5.78906 15.1875 7.42969 13.5195L12.1328 8.70703C12.2969 8.54297 12.2969 8.26953 12.1055 8.10547L11.4766 7.47656C11.3125 7.3125 11.0391 7.3125 10.875 7.47656L6.17188 12.2891C5.24219 13.2461 3.73828 13.2461 2.80859 12.2891C1.87891 11.332 1.87891 9.74609 2.83594 8.78906L8.57812 2.91016C9.09766 2.39062 9.94531 2.39062 10.4648 2.91016C10.9844 3.45703 10.9844 4.35938 10.4648 4.90625L5.46094 10.0195C5.35156 10.1289 5.16016 10.1289 5.02344 10.0195C4.91406 9.88281 4.91406 9.63672 5.05078 9.5L8.98828 5.50781C9.15234 5.31641 9.15234 5.04297 8.96094 4.87891L8.35938 4.27734C8.16797 4.08594 7.89453 4.11328 7.73047 4.27734L3.79297 8.29688C3 9.08984 2.97266 10.4023 3.76562 11.2227C4.55859 12.0703 5.89844 12.0703 6.71875 11.25L11.7227 6.13672C12.9258 4.90625 12.8984 2.91016 11.7227 1.67969C10.4922 0.449219 8.52344 0.449219 7.32031 1.67969L1.57812 7.55859C-0.0351562 9.19922 -0.0625 11.8516 1.55078 13.5195Z"
+                    fill="white"
+                  />
+                </svg>
+                Add/Edit File Link
+              </button>
+              <button class="btn primary">Nudge Client For Payment</button>
+            </div>
           </footer>
-        </form>
+        </div>
       </div>
     </section>
-    <script>
-      function getFileData(myFile) {
-        document.getElementById("fileName").innerHTML = myFile.files[0].name;
-      }
-      function collapse() {
-        document.querySelector(".sidebar").classList.toggle("open");
-      }
-    </script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
