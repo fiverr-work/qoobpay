@@ -33,7 +33,7 @@
         span {
           font-size: 24px;
           color: #081d26;
-          padding: 15px;
+          padding: 12px 15px;
         }
       }
       .price {
@@ -44,9 +44,9 @@
         font-weight: 500;
         font-size: 24px;
       }
-      .body{
-        input{
-          background: #F5F5F5;
+      .body {
+        input {
+          background: #f5f5f5;
           border-radius: 5px;
           padding: 10px;
           padding-left: 20px;
@@ -59,18 +59,18 @@
             position: relative;
             top: 6px;
             cursor: pointer;
-        }
+          }
         }
       }
     }
-    &>.details{
+    & > .details {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       padding-bottom: 30px;
       margin-bottom: 20px;
       padding-left: 28px;
       padding-right: 28px;
-      &>p{
-        background: #F5F5F5;
+      & > p {
+        background: #f5f5f5;
         border-radius: 5px;
         padding: 15px 20px;
         font-weight: 600;
@@ -79,56 +79,58 @@
         margin-top: 30px;
         margin-bottom: 24px;
       }
-      .service{
+      .service {
         display: flex;
         margin-bottom: 15px;
         justify-content: space-between;
-        flex-wrap: wrap;
-        &>div{
-          input{
-            background: #F5F5F5;
+        & > div {
+          input {
+            background: #f5f5f5;
             border-radius: 5px;
             padding: 6px 12px;
             font-size: 14px;
             line-height: 21px;
             width: 100%;
           }
-          label{
-            color: #081D26;
+          label {
+            color: #081d26;
             opacity: 0.5;
             margin-bottom: 7px;
             text-transform: uppercase;
             display: block;
             font-size: 12px;
             line-height: 18px;
+            font-family: "Poppins SemiBold";
           }
-          &:not(:first-child){
-            margin-left: 25px;
+          &:not(:last-child) {
+            margin-right: 25px;
           }
-          &:nth-child(1){
+          &:nth-child(1) {
             min-width: 296px;
           }
-          &:nth-child(2){
-            input{
+          &:nth-child(2) {
+            input {
               width: 120px;
             }
           }
-          &:nth-child(3){
-            input{
+          &:nth-child(3) {
+            input {
               width: 80px;
             }
           }
-          &:nth-child(4){
-            span{
+          &:nth-child(4) {
+            span {
               font-size: 16px;
               line-height: 24px;
             }
           }
         }
-
       }
-      .new-item{
-        color: #3B55E6;text-decoration-line: underline;font-weight: bold;letter-spacing: -0.24px;
+      .new-item {
+        color: #3b55e6;
+        text-decoration-line: underline;
+        font-weight: bold;
+        letter-spacing: -0.24px;
         font-size: 12px;
         line-height: 18px;
         background: none;

@@ -1,6 +1,6 @@
 .sidebar {
   background-color: #081d26;
-  width: 206px;
+  width: 217px;
   color: rgba(255, 255, 255, 0.5);
   padding: 32px;
   display: flex;
@@ -11,16 +11,16 @@
   .brand {
     display: flex;
     align-items: center;
-    color: white;
     margin-bottom: 50px;
-    font-size: 23px;
     img {
       margin-right: 15px;
     }
-    span{
+    span {
+      color: white;
+      font-size: 23px;
       font-family: "Poppins Regular";
-      b{
-        font-family: "Poppins Bold";
+      b {
+        font-family: "Poppins SemiBold";
       }
     }
   }
@@ -42,17 +42,24 @@
     display: block;
   }
 
-  @media only screen and (max-width: 756px) {
+  @media only screen and (max-width: 1200px) {
     position: fixed;
     inset: 0;
     left: -100%;
-    width: 100%;
-    align-items: center;
-    nav {
-      margin-top: auto;
-    }
+    z-index: 10;
     &.open {
       left: 0;
+      .close {
+        position: fixed;
+        z-index: -1;
+        background: rgba(black, 0.5);
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+    .close {
+      display: block;
     }
   }
 }
